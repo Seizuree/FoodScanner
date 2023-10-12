@@ -102,7 +102,7 @@ const MainApp = () => {
         name="Camera"
         component={Camera}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: () => (
             <Image source={require("../assets/Camera.png")} />
           ),
           tabBarLabel: "",
@@ -112,7 +112,7 @@ const MainApp = () => {
         name="History"
         component={History}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: () => (
             <Image source={require("../assets/History.png")} />
           ),
           tabBarLabel: "",
@@ -123,7 +123,7 @@ const MainApp = () => {
         name="Recipe"
         component={RecipeStack}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: () => (
             <Image source={require("../assets/Recipe.png")} />
           ),
           tabBarLabel: "",
@@ -134,7 +134,7 @@ const MainApp = () => {
         name="Account"
         component={AccountStack}
         options={{
-          tabBarIcon: ({ color, size }) => (
+          tabBarIcon: () => (
             <Image source={require("../assets/Account.png")} />
           ),
           tabBarLabel: "",
@@ -219,4 +219,4 @@ const Router = () => {
 
 export default Router;
 
-const styles = StyleSheet.create({});
+

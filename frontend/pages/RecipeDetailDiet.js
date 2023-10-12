@@ -5,6 +5,7 @@ import {
   Text,
   ScrollView,
   TouchableOpacity,
+  Dimensions,
   StyleSheet,
   StatusBar,
 } from "react-native";
@@ -118,7 +119,7 @@ const RecipeDetailDiet = () => {
 
 export default RecipeDetailDiet;
 
-const { height, width } = Dimensions.get("window");
+const height = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   container: {

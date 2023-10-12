@@ -37,7 +37,7 @@ const LandingPage = () => {
         <View style={styles.innerContainer}>
           <Image
             style={styles.landingImage}
-            source={require("../assets/landingPage.png")}
+            source={require("../../assets/landingPage.png")}
             resizeMode="contain"
           />
           <Text style={styles.titleLanding}>Selamat Datang!</Text>

@@ -42,7 +42,7 @@ const RecipeDetailHealty = () => {
           <View style={styles.imageContainer}>
             <Image
               style={styles.recipeDetailImage}
-              source={require("../assets/Salad1.png")}
+              source={require("../../assets/Salad1.png")}
             />
           </View>
         </View>

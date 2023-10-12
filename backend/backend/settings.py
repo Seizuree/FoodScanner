@@ -14,7 +14,7 @@ SECRET_KEY = "django-insecure-3@6ga_1aqr$!l2dkwj9qi!l=))(*^#ck81tp7u5j%3xqgy31@9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -121,3 +121,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 MODELS = os.path.join(BASE_DIR, 'api/dl')
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800

@@ -40,13 +40,13 @@ const Account = () => {
         <View style={styles.logoutContainer}>
           <Image
             style={styles.logout}
-            source={require("../assets/logout.png")}
+            source={require("../../assets/logout.png")}
           />
         </View>
 
         <View style={styles.container}>
           <ImageBackground
-            source={require("../assets/profileBackground.png")}
+            source={require("../../assets/profileBackground.png")}
             style={styles.profileBackground}
             resizeMode="cover"
           >
@@ -54,7 +54,7 @@ const Account = () => {
               <View style={styles.profilePictureContainer}>
                 <Image
                   style={styles.profilePicture}
-                  source={require("../assets/profilePicture.png")}
+                  source={require("../../assets/profilePicture.png")}
                 />
               </View>
               <View style={styles.overlayTextContainer}>
@@ -71,7 +71,7 @@ const Account = () => {
           <View style={styles.accountSettingContainer}>
             <Image
               style={styles.accountSettingPicture}
-              source={require("../assets/accountSetting.png")}
+              source={require("../../assets/accountSetting.png")}
             />
           </View>
           <View style={styles.accountSettingContainer}>
@@ -86,7 +86,7 @@ const Account = () => {
           <View style={styles.reportProblemContainer}>
             <Image
               style={styles.reportProblemPicture}
-              source={require("../assets/reportProblem.png")}
+              source={require("../../assets/reportProblem.png")}
             />
           </View>
           <View style={styles.reportProblemContainer}>
@@ -101,7 +101,7 @@ const Account = () => {
           <View style={styles.termsAndConditionContainer}>
             <Image
               style={styles.termsAndConditionPicture}
-              source={require("../assets/termsAndCondition.png")}
+              source={require("../../assets/termsAndCondition.png")}
             />
           </View>
           <View style={styles.termsAndConditionContainer}>
@@ -118,7 +118,7 @@ const Account = () => {
           <View style={styles.notificationContainer}>
             <Image
               style={styles.notificationPicture}
-              source={require("../assets/notification.png")}
+              source={require("../../assets/notification.png")}
             />
           </View>
           <View style={styles.notificationContainer}>

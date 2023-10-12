@@ -12,24 +12,20 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const RecipeHowToDiet = () => {
+const RecipeHowToHealty = () => {
   const Tab = createBottomTabNavigator();
   const navigation = useNavigation();
+
+  const handleRecipeDetailHealty = () => {
+    navigation.navigate("RecipeDetailHealty");
+  };
 
   const handleDiet = () => {
     navigation.navigate("RecipeDiet");
   };
 
-  const handleRecipeDetailDiet = () => {
-    navigation.navigate("RecipeDetailDiet");
-  };
-
-  const handleRecipeHowToDiet = () => {
+  const handleRecipeHowToHealty = () => {
     navigation.navigate("MainApp");
-  };
-
-  const handleHealty = () => {
-    navigation.navigate("Recipe");
   };
 
   return (
@@ -37,9 +33,9 @@ const RecipeHowToDiet = () => {
       <ScrollView>
         <View style={styles.innerContainer}></View>
         <View style={styles.boxContainer}>
-          <TouchableOpacity style={styles.healtyBox} onPress={handleHealty}>
+          <View style={styles.healtyBox}>
             <Text style={styles.healty}>Healty</Text>
-          </TouchableOpacity>
+          </View>
           <TouchableOpacity style={styles.dietBox} onPress={handleDiet}>
             <Text style={styles.diet}>Diet</Text>
           </TouchableOpacity>
@@ -50,7 +46,7 @@ const RecipeHowToDiet = () => {
           <View style={styles.imageContainer}>
             <Image
               style={styles.recipeDetailImage}
-              source={require("../assets/Salad1.png")}
+              source={require("../../assets/Salad1.png")}
             />
           </View>
         </View>
@@ -58,11 +54,11 @@ const RecipeHowToDiet = () => {
         <View style={styles.textContainer}>
           <TouchableOpacity
             style={styles.boxDetail}
-            onPress={handleRecipeDetailDiet}
+            onPress={handleRecipeDetailHealty}
           >
             <Text style={styles.detailText}>Detail</Text>
           </TouchableOpacity>
-          <View style={styles.boxHowTo} onPress={handleRecipeHowToDiet}>
+          <View style={styles.boxHowTo} onPress={handleRecipeHowToHealty}>
             <Text style={styles.howToText}>How To</Text>
           </View>
         </View>
@@ -88,7 +84,7 @@ const RecipeHowToDiet = () => {
   );
 };
 
-export default RecipeHowToDiet;
+export default RecipeHowToHealty;
 
 const { height, width } = Dimensions.get("window");
 
@@ -113,7 +109,7 @@ const styles = StyleSheet.create({
   },
   healtyBox: {
     borderWidth: 1,
-    backgroundColor: "#ADC698",
+    backgroundColor: "#60A129",
     borderColor: "transparent",
     borderRadius: 10,
     width: "15%",
@@ -124,7 +120,7 @@ const styles = StyleSheet.create({
   },
   dietBox: {
     borderWidth: 1,
-    backgroundColor: "#60A129",
+    backgroundColor: "#ADC698",
     borderColor: "transparent",
     borderRadius: 10,
     width: "15%",

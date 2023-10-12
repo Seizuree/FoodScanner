@@ -29,7 +29,7 @@ const Daftar = () => {
           <View style={styles.tittleContainer}>
             <Image
               style={styles.daftarImage}
-              source={require("../assets/logoFoodScanner.png")}
+              source={require("../../assets/logoFoodScanner.png")}
               resizeMode="contain"
             />
             <Text style={styles.daftarTittle}>Food Scanner</Text>
@@ -120,7 +120,6 @@ const Daftar = () => {
         </View>
 
         <TouchableOpacity style={styles.textBoxDaftar} onPress={handleSignUp}>
-          {/* <View style={styles.textBoxDaftar}> */}
           <Text style={styles.buttonTextDaftar}>Daftar</Text>
         </TouchableOpacity>
 

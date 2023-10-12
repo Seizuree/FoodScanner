@@ -1,24 +1,23 @@
 import React from "react";
 import { Image } from "react-native";
-import { StyleSheet } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import LandingPage from "../pages/LandingPage";
-import Camera from "../pages/Camera";
-import History from "../pages/History";
-import Recipe from "../pages/Recipe";
-import Account from "../pages/Account";
-import Daftar from "../pages/Daftar";
-import Masuk from "../pages/Masuk";
-import RecipeDiet from "../pages/RecipeDiet";
-import RecipeDetailHealty from "../pages/RecipeDetailHealty";
-import RecipeHowToHealty from "../pages/RecipeHowToHealty";
-import RecipeDetailDiet from "../pages/RecipeDetailDiet";
-import RecipeHowToDiet from "../pages/RecipeHowToDiet";
-import AccountSetting from "../pages/AccountSetting";
-import ReportProblem from "../pages/ReportProblem";
-import TermsAndCondition from "../pages/TermsAndCondition";
-import Notification from "../pages/Notification";
+import LandingPage from "../src/pages/LandingPage";
+import History from "../src/pages/History";
+import Recipe from "../src/pages/Recipe";
+import Account from "../src/pages/Account";
+import Daftar from "../src/pages/Daftar";
+import Masuk from "../src/pages/Masuk";
+import RecipeDiet from "../src/pages/RecipeDiet";
+import RecipeDetailHealty from "../src/pages/RecipeDetailHealty";
+import RecipeHowToHealty from "../src/pages/RecipeHowToHealty";
+import RecipeDetailDiet from "../src/pages/RecipeDetailDiet";
+import RecipeHowToDiet from "../src/pages/RecipeHowToDiet";
+import AccountSetting from "../src/pages/AccountSetting";
+import ReportProblem from "../src/pages/ReportProblem";
+import TermsAndCondition from "../src/pages/TermsAndCondition";
+import Notification from "../src/pages/Notification";
+import OpenCamera from "../src/pages/OpenCamera";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -100,11 +99,9 @@ const MainApp = () => {
     <Tab.Navigator>
       <Tab.Screen
         name="Camera"
-        component={Camera}
+        component={OpenCamera}
         options={{
-          tabBarIcon: () => (
-            <Image source={require("../assets/Camera.png")} />
-          ),
+          tabBarIcon: () => <Image source={require("../assets/Camera.png")} />,
           tabBarLabel: "",
         }}
       />
@@ -112,9 +109,7 @@ const MainApp = () => {
         name="History"
         component={History}
         options={{
-          tabBarIcon: () => (
-            <Image source={require("../assets/History.png")} />
-          ),
+          tabBarIcon: () => <Image source={require("../assets/History.png")} />,
           tabBarLabel: "",
           headerShown: false,
         }}
@@ -123,9 +118,7 @@ const MainApp = () => {
         name="Recipe"
         component={RecipeStack}
         options={{
-          tabBarIcon: () => (
-            <Image source={require("../assets/Recipe.png")} />
-          ),
+          tabBarIcon: () => <Image source={require("../assets/Recipe.png")} />,
           tabBarLabel: "",
           headerShown: false,
         }}
@@ -134,9 +127,7 @@ const MainApp = () => {
         name="Account"
         component={AccountStack}
         options={{
-          tabBarIcon: () => (
-            <Image source={require("../assets/Account.png")} />
-          ),
+          tabBarIcon: () => <Image source={require("../assets/Account.png")} />,
           tabBarLabel: "",
           headerShown: false,
         }}
@@ -218,5 +209,3 @@ const Router = () => {
 };
 
 export default Router;
-
-

@@ -29,7 +29,7 @@ const TermsAndCondition = () => {
           <TouchableOpacity onPress={handleBack}>
             <Image
               style={styles.back}
-              source={require("../assets/arrow-left.png")}
+              source={require("../../assets/arrow-left.png")}
             />
           </TouchableOpacity>
           <Text style={styles.termsAndConditionText}>Syarat dan Ketentuan</Text>

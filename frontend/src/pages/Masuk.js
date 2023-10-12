@@ -31,7 +31,7 @@ const Masuk = () => {
           <View style={styles.tittleContainer}>
             <Image
               style={styles.masukImage}
-              source={require("../assets/logoFoodScanner.png")}
+              source={require("../../assets/logoFoodScanner.png")}
               resizeMode="contain"
             />
             <Text style={styles.masukTittle}>Food Scanner</Text>
@@ -76,11 +76,11 @@ const Masuk = () => {
         <View style={styles.googleAndFacebook}>
           <Image
             style={styles.googleImage}
-            source={require("../assets/Google.png")}
+            source={require("../../assets/Google.png")}
           />
           <Image
             style={styles.FacebookImage}
-            source={require("../assets/Facebook.png")}
+            source={require("../../assets/Facebook.png")}
           />
         </View>
       </ScrollView>

@@ -11,20 +11,16 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const RecipeDiet = () => {
+const Recipe = () => {
   const Tab = createBottomTabNavigator();
   const navigation = useNavigation();
 
   const handleDiet = () => {
-    navigation.navigate("MainApp");
+    navigation.navigate("RecipeDiet");
   };
 
-  const handleRecipeDetailDiet = () => {
-    navigation.navigate("RecipeDetailDiet");
-  };
-
-  const handleRecipe = () => {
-    navigation.navigate("Recipe");
+  const handleRecipeDetailHealty = () => {
+    navigation.navigate("RecipeDetailHealty");
   };
 
   return (
@@ -32,22 +28,22 @@ const RecipeDiet = () => {
       <ScrollView>
         <View style={styles.innerContainer}></View>
         <View style={styles.boxContainer}>
-          <TouchableOpacity style={styles.healtyBox} onPress={handleRecipe}>
+          <View style={styles.healtyBox}>
             <Text style={styles.healty}>Healty</Text>
-          </TouchableOpacity>
-          <View style={styles.dietBox} onPress={handleDiet}>
-            <Text style={styles.diet}>Diet</Text>
           </View>
+          <TouchableOpacity style={styles.dietBox} onPress={handleDiet}>
+            <Text style={styles.diet}>Diet</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.recipeLine}></View>
 
         <TouchableOpacity
           style={styles.boxRecipe}
-          onPress={handleRecipeDetailDiet}
+          onPress={handleRecipeDetailHealty}
         >
           <Image
             style={styles.recipeImage}
-            source={require("../assets/Salad.png")}
+            source={require("../../assets/Salad.png")}
           />
           <View style={styles.recipeDetail}>
             <Text style={styles.recipeText}>Green Salad</Text>
@@ -56,7 +52,7 @@ const RecipeDiet = () => {
           </View>
           <Image
             style={styles.recipeArrow}
-            source={require("../assets/arrow.png")}
+            source={require("../../assets/arrow.png")}
           />
         </TouchableOpacity>
       </ScrollView>
@@ -64,7 +60,7 @@ const RecipeDiet = () => {
   );
 };
 
-export default RecipeDiet;
+export default Recipe;
 
 const styles = StyleSheet.create({
   container: {
@@ -85,18 +81,18 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginRight: 10,
   },
-  dietBox: {
+  healtyBox: {
     borderWidth: 1,
     backgroundColor: "#60A129",
     borderColor: "transparent",
     borderRadius: 10,
     width: "15%",
   },
-  diet: {
+  healty: {
     color: "white",
     textAlign: "center",
   },
-  healtyBox: {
+  dietBox: {
     borderWidth: 1,
     backgroundColor: "#ADC698",
     borderColor: "transparent",
@@ -104,7 +100,7 @@ const styles = StyleSheet.create({
     width: "15%",
     justifyContent: "center",
   },
-  healty: {
+  diet: {
     color: "white",
     textAlign: "center",
   },

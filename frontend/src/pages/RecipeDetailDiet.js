@@ -5,27 +5,31 @@ import {
   Text,
   ScrollView,
   TouchableOpacity,
+  Dimensions,
   StyleSheet,
   StatusBar,
-  Dimensions,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-const RecipeHowToHealty = () => {
+const RecipeDetailDiet = () => {
   const Tab = createBottomTabNavigator();
   const navigation = useNavigation();
 
   const handleRecipeDetailHealty = () => {
-    navigation.navigate("RecipeDetailHealty");
+    navigation.navigate("MainApp");
   };
 
   const handleDiet = () => {
     navigation.navigate("RecipeDiet");
   };
 
-  const handleRecipeHowToHealty = () => {
-    navigation.navigate("MainApp");
+  const handleRecipeHowToDiet = () => {
+    navigation.navigate("RecipeHowToDiet");
+  };
+
+  const handleHealty = () => {
+    navigation.navigate("Recipe");
   };
 
   return (
@@ -33,9 +37,9 @@ const RecipeHowToHealty = () => {
       <ScrollView>
         <View style={styles.innerContainer}></View>
         <View style={styles.boxContainer}>
-          <View style={styles.healtyBox}>
+          <TouchableOpacity style={styles.healtyBox} onPress={handleHealty}>
             <Text style={styles.healty}>Healty</Text>
-          </View>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.dietBox} onPress={handleDiet}>
             <Text style={styles.diet}>Diet</Text>
           </TouchableOpacity>
@@ -46,47 +50,76 @@ const RecipeHowToHealty = () => {
           <View style={styles.imageContainer}>
             <Image
               style={styles.recipeDetailImage}
-              source={require("../assets/Salad1.png")}
+              source={require("../../assets/Salad1.png")}
             />
           </View>
         </View>
 
         <View style={styles.textContainer}>
-          <TouchableOpacity
-            style={styles.boxDetail}
-            onPress={handleRecipeDetailHealty}
-          >
+          <View style={styles.boxDetail}>
             <Text style={styles.detailText}>Detail</Text>
-          </TouchableOpacity>
-          <View style={styles.boxHowTo} onPress={handleRecipeHowToHealty}>
-            <Text style={styles.howToText}>How To</Text>
           </View>
+          <TouchableOpacity
+            style={styles.boxHowTo}
+            onPress={handleRecipeHowToDiet}
+          >
+            <Text style={styles.howToText}>How To</Text>
+          </TouchableOpacity>
         </View>
 
         <Text style={styles.foodName}>Green Salad</Text>
         <Text style={styles.foodCategory}>Dessert</Text>
-        <Text style={styles.stepsText}>Langkah-langkah</Text>
-        <Text style={styles.steps}>
-          - Siapkan buah-buahan yang akan dipakai, lalu potong dadu
-          masing-masing buah.
-          {"\n"}- Panaskan susu cair full cream, lalu tambahkan susu kental
-          manis.
-          {"\n"}- Setelah tercampur, tambahkan tepung maizena lalu aduk sampai
-          mengental.
-          {"\n"}- Setelah dingin, tambahkan yoghurt, aduk, lalu campurkan ke
-          dalam buah-buahan yang sudah dipotong-potong.
-          {"\n"}- Tambahkan parutan keju di atasnya, lalu dinginkan ke dalam
-          kulkas.
-          {"\n"}- Setelah dingin, salad buah pun siap disajikan.
+        <Text style={styles.foodDesc}>
+          Green Salad adalah makanan yang berasal dari Italia. Green Salad
+          mempunyai kandungan yang sangat sehat yang terdiri dari berbagai macam
+          sayuran-sayuran, buah-buahan serta saus-saus yang sangat menarik.{" "}
         </Text>
+
+        <Text style={styles.mainIngredientText}>Bahan Utama</Text>
+        <View style={styles.mainIngredient}>
+          <Text style={styles.mainIngredientLeft}>
+            - Tomat
+            {"\n"}- Timun
+          </Text>
+          <Text style={styles.mainIngredientRight}>
+            2 buah
+            {"\n"}2 buah
+          </Text>
+        </View>
+
+        <Text style={styles.spiceText}>Bumbu</Text>
+        <View style={styles.spice}>
+          <Text style={styles.spiceLeft}>
+            - Garam
+            {"\n"}- Gula
+          </Text>
+          <Text style={styles.spiceRight}>
+            2 sdm
+            {"\n"}
+            2sdm
+          </Text>
+        </View>
+
+        <Text style={styles.sauceText}>Sauce</Text>
+        <View style={styles.sauce}>
+          <Text style={styles.sauceLeft}>
+            - Mayonaise
+            {"\n"}- Minyak Bawang
+          </Text>
+          <Text style={styles.sauceRight}>
+            2sdm
+            {"\n"}
+            3sdm
+          </Text>
+        </View>
       </ScrollView>
     </View>
   );
 };
 
-export default RecipeHowToHealty;
+export default RecipeDetailDiet;
 
-const { height, width } = Dimensions.get("window");
+const height = Dimensions.get("window").height;
 
 const styles = StyleSheet.create({
   container: {
@@ -109,7 +142,7 @@ const styles = StyleSheet.create({
   },
   healtyBox: {
     borderWidth: 1,
-    backgroundColor: "#60A129",
+    backgroundColor: "#ADC698",
     borderColor: "transparent",
     borderRadius: 10,
     width: "15%",
@@ -120,7 +153,7 @@ const styles = StyleSheet.create({
   },
   dietBox: {
     borderWidth: 1,
-    backgroundColor: "#ADC698",
+    backgroundColor: "#60A129",
     borderColor: "transparent",
     borderRadius: 10,
     width: "15%",
@@ -169,7 +202,7 @@ const styles = StyleSheet.create({
   boxDetail: {
     flex: 1,
     borderRadius: 10,
-    backgroundColor: "#ADC698",
+    backgroundColor: "#60A129",
     borderColor: "transparent",
     marginRight: 5,
     height: height * 0.03,
@@ -177,7 +210,7 @@ const styles = StyleSheet.create({
   boxHowTo: {
     flex: 1,
     borderRadius: 10,
-    backgroundColor: "#60A129",
+    backgroundColor: "#ADC698",
     borderColor: "transparent",
     marginLeft: 5,
     height: height * 0.03,
@@ -192,6 +225,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
   },
+  mainIngredient: {
+    flexDirection: "row",
+    flex: 1,
+  },
   foodName: {
     color: "#60A129",
     fontWeight: "bold",
@@ -205,16 +242,65 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: "2%",
   },
-  stepsText: {
+  foodDesc: {
+    marginLeft: 30,
+    marginRight: 30,
+    fontSize: 14,
+    marginTop: "2%",
+  },
+  mainIngredientText: {
+    fontSize: 16,
     color: "#60A129",
     fontWeight: "bold",
     marginLeft: 30,
     marginTop: "5%",
-    fontSize: 16,
   },
-  steps: {
-    fontSize: 13,
+  mainIngredientLeft: {
+    alignContent: "flex-start",
+    flex: 1,
     marginLeft: 30,
+  },
+  mainIngredientRight: {
+    alignContent: "flex-end",
     marginRight: 30,
+    color: "#60A129",
+  },
+  spiceText: {
+    color: "#60A129",
+    fontWeight: "bold",
+    marginLeft: 30,
+    marginTop: "5%",
+  },
+  spice: {
+    flexDirection: "row",
+  },
+  spiceLeft: {
+    flex: 1,
+    alignContent: "flex-start",
+    marginLeft: 30,
+  },
+  spiceRight: {
+    alignContent: "flex-end",
+    marginRight: 30,
+    color: "#60A129",
+  },
+  sauceText: {
+    color: "#60A129",
+    fontWeight: "bold",
+    marginLeft: 30,
+    marginTop: "5%",
+  },
+  sauce: {
+    flexDirection: "row",
+  },
+  sauceLeft: {
+    flex: 1,
+    alignContent: "flex-start",
+    marginLeft: 30,
+  },
+  sauceRight: {
+    alignContent: "flex-end",
+    marginRight: 30,
+    color: "#60A129",
   },
 });

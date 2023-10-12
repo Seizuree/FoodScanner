@@ -36,7 +36,7 @@ const AccountSetting = () => {
           <TouchableOpacity onPress={handleBack}>
             <Image
               style={styles.back}
-              source={require("../assets/arrow-left.png")}
+              source={require("../../assets/arrow-left.png")}
             />
           </TouchableOpacity>
           <Text style={styles.accountSettingText}>Pengaturan Akun</Text>
@@ -45,7 +45,7 @@ const AccountSetting = () => {
         <View style={styles.profilePictureContainer}>
           <Image
             style={styles.profilePicture}
-            source={require("../assets/profilePicture.png")}
+            source={require("../../assets/profilePicture.png")}
           />
         </View>
 
@@ -106,7 +106,6 @@ const AccountSetting = () => {
         </View>
 
         <TouchableOpacity style={styles.textBoxSimpan} onPress={handleSimpan}>
-          {/* <View style={styles.textBoxDaftar}> */}
           <Text style={styles.buttonTextSimpan}>Simpan</Text>
         </TouchableOpacity>
       </ScrollView>

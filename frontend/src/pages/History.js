@@ -19,7 +19,7 @@ const History = () => {
         <View style={styles.boxHistory}>
           <Image
             style={styles.foodImage}
-            source={require("../assets/Salad.png")}
+            source={require("../../assets/Salad.png")}
           />
           <View style={styles.foodDetail}>
             <Text style={styles.foodText}>Green Salad</Text>

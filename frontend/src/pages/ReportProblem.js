@@ -35,7 +35,7 @@ const ReportProblem = () => {
           <TouchableOpacity onPress={handleBack}>
             <Image
               style={styles.back}
-              source={require("../assets/arrow-left.png")}
+              source={require("../../assets/arrow-left.png")}
             />
           </TouchableOpacity>
           <Text style={styles.reportProblemText}>Laporkan Masalah</Text>
@@ -49,7 +49,7 @@ const ReportProblem = () => {
         </View>
 
         <View style={styles.reportImage}>
-          <Image style={styles.plus} source={require("../assets/plus.png")} />
+          <Image style={styles.plus} source={require("../../assets/plus.png")} />
         </View>
 
         <TouchableOpacity

@@ -32,7 +32,7 @@ const Notification = () => {
           <TouchableOpacity onPress={handleBack}>
             <Image
               style={styles.back}
-              source={require("../assets/arrow-left.png")}
+              source={require("../../assets/arrow-left.png")}
             />
           </TouchableOpacity>
           <Text style={styles.notificationText}>Notifikasi</Text>

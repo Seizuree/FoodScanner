@@ -76,7 +76,7 @@ const Masuk = () => {
         <View style={styles.googleAndFacebook}>
           <Image
             style={styles.googleImage}
-            source={require("../../assets/Google.png")}
+            source={require("../../assets/google-icon-2048x2048-czn3g8x81.png")}
           />
           <Image
             style={styles.FacebookImage}

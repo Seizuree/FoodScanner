@@ -37,16 +37,167 @@ const Recipe = () => {
         </View>
         <View style={styles.recipeLine}></View>
 
+        {/* Menu 1
+          ==================================== */}
         <TouchableOpacity
           style={styles.boxRecipe}
           onPress={handleRecipeDetailHealty}
         >
           <Image
             style={styles.recipeImage}
-            source={require("../../assets/Salad.png")}
+            source={require("../../assets/menuHealty1.png")}
           />
           <View style={styles.recipeDetail}>
-            <Text style={styles.recipeText}>Green Salad</Text>
+            <Text style={styles.recipeText}>Mixed Berry Parfait</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 2
+        ================================== */}
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailHealty}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuHealty2.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Mango Salsa with Chips</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 3
+        ================================ */}
+
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailHealty}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuHealty3.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Caprese Salad</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Medium</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 4
+        ================================= */}
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailHealty}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuHealty4.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Fruit and Nut Quinoa Salad</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 5
+        =============================== */}
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailHealty}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuHealty5.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Cucumber and Tzatziki Dip</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 6
+        =================================
+           */}
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailHealty}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuHealty6.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Roasted Asparagus</Text>
+            <Text style={styles.recipeCategory}>Snack</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 7
+        ======================================= */}
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailHealty}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuHealty7.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Tomato and Cucumber Gazpacho</Text>
+            <Text style={styles.recipeCategory}>Lunch Meal</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 8
+        ====================== */}
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailHealty}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuHealty8.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Watermelon Feta Salad</Text>
             <Text style={styles.recipeCategory}>Dessert</Text>
             <Text style={styles.recipeLevel}>Beginner</Text>
           </View>

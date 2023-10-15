@@ -1,10 +1,9 @@
 {
   "expo": {
-    "name": "AiApp",
-    "slug": "AiApp",
-    "version": "1.0.0",
+    "name": "FoodScanner",
+    "slug": "FoodScanner",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logoFoodScanner.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -21,15 +20,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.seizure.FoodScanner"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logoFoodScanner.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1b2e4362-4c8e-4d96-8c23-d4d5e9a77ff4"
+      }
     }
-    // "extra": {
-    //   "eas": {
-    //     "projectId": "60300adb-7020-4a14-a8d6-3f953848d8b2"
-    //   }
-    // }
   }
 }

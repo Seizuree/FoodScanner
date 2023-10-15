@@ -40,7 +40,7 @@ export default function OpenCamera() {
       type: "image/jpg",
     });
     axios
-      .post("http://192.168.1.152:8000/api/predict/", formData, {
+      .post("https://serval-outgoing-deer.ngrok-free.app/api/predict/", formData, {
         headers: {
           Accept: "application/json",
           "Content-Type": "multipart/form-data",
@@ -79,7 +79,26 @@ export default function OpenCamera() {
           flashMode={flash}
           ref={cameraRef}
         >
-          <View style={styles.head}></View>
+          <View style={styles.head}>
+            <Button
+              icon={"retweet"}
+              onPress={() =>
+                setType(
+                  type === CameraType.back ? CameraType.front : CameraType.back
+                )
+              }
+            />
+            <Button
+              icon={"flash"}
+              onPress={() => {
+                setFlash(
+                  flash === Camera.Constants.FlashMode.off
+                    ? Camera.Constants.FlashMode.on
+                    : Camera.Constants.FlashMode.off
+                );
+              }}
+            />
+          </View>
         </Camera>
       ) : (
         <Image source={{ uri: image }} style={styles.camera} />
@@ -127,6 +146,6 @@ const styles = StyleSheet.create({
   head: {
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 30,
+    padding: 35,
   },
 });

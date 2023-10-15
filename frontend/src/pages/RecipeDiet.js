@@ -41,6 +41,8 @@ const RecipeDiet = () => {
         </View>
         <View style={styles.recipeLine}></View>
 
+        {/* menu 1 */}
+        {/* ============================== */}
         <TouchableOpacity
           style={styles.boxRecipe}
           onPress={handleRecipeDetailDiet}
@@ -59,6 +61,178 @@ const RecipeDiet = () => {
             source={require("../../assets/arrow.png")}
           />
         </TouchableOpacity>
+
+        {/* menu2 */}
+        {/* =============================== */}
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet2.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Avocado Toast</Text>
+            <Text style={styles.recipeCategory}>Breakfast</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* menu 3 */}
+        {/* ========================================== */}
+
+        <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet3.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Spanich Salad</Text>
+            <Text style={styles.recipeCategory}>Snack</Text>
+            <Text style={styles.recipeLevel}>Medium</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+          {/* menu 4
+          ========================================== */}
+             <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet4.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Fruit Smoothie</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 5
+        ============================================== */}
+
+           <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet5.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Greek Yogurt Parfait</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 6
+        ================================================ */}
+         <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet6.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Hummus and Carrot Sticks</Text>
+            <Text style={styles.recipeCategory}>Lunch</Text>
+            <Text style={styles.recipeLevel}>Medium</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 7
+        =================================================== */}
+         <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet7.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Kale Smoothie</Text>
+            <Text style={styles.recipeCategory}>Breakfast</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 8
+        ========================================================== */}
+         <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet8.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Mixed Berry Salad</Text>
+            <Text style={styles.recipeCategory}>Dessert</Text>
+            <Text style={styles.recipeLevel}>Medium</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+        {/* Menu 9
+        ========================================================= */}
+         <TouchableOpacity
+          style={styles.boxRecipe}
+          onPress={handleRecipeDetailDiet}
+        >
+          <Image
+            style={styles.recipeImage}
+            source={require("../../assets/menuDiet9.png")}
+          />
+          <View style={styles.recipeDetail}>
+            <Text style={styles.recipeText}>Cauiliflower Fried Rice</Text>
+            <Text style={styles.recipeCategory}>Dinner</Text>
+            <Text style={styles.recipeLevel}>Beginner</Text>
+          </View>
+          <Image
+            style={styles.recipeArrow}
+            source={require("../../assets/arrow.png")}
+          />
+        </TouchableOpacity>
+
+
       </ScrollView>
     </View>
   );
